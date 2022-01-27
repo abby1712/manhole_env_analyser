@@ -1,4 +1,4 @@
-#define LIGHTSENSORPIN D0 //Ambient light sensor reading
+#define GASSENSORPIN D0 //Gas Sensor Reading
 
 #include <Buzzer.h>
 Buzzer buzzer(D8);
@@ -11,7 +11,7 @@ Serial.begin(9600);
 void loop()
 {
  int reading;
-reading = analogRead(LIGHTSENSORPIN);//Read light level
+reading = analogRead(GASSENSORPIN);//Read light level
 Serial.println("Gas Sensor Reading: ");
 Serial.println(reading);
 if (reading ==0)
@@ -24,9 +24,6 @@ Serial.println("\n");
 delay(500);
 
 }
-
-
-
 
 
 void Buzzer_alert()
